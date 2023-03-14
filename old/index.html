@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mapa da jornada de vídeos</title>
+	<link rel="stylesheet" href="build/css/global.css?version=2">
+	<link href="https://fonts.googleapis.com/css?family=Arimo&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Iceland" />
+	<link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+	<script
+	  src="https://code.jquery.com/jquery-3.4.1.min.js"
+	  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	  crossorigin="anonymous"></script>
+</script>
+</head>
+<!-- https://marketingcomdigital.com.br/canal-youtube-dicas-checklist/
+https://codepen.io/designcouch/pen/OJPdZxg
+-->
+<body>
+	<div class="container">
+		<div class="menu">
+			<div class="open-menu"></div>
+			<div class="wrapper">
+				<ul class="register">
+					<li class="register">Registrar</li
+					><li class="login">Login</li>
+				</ul>
+				<h3>Módulos</h3>
+				<h2>Explore</h2>
+				<ul>
+					<li class="first"><span class="icon-sub-menu"><i>Ilha 1<em class="tag-ilha tag-html">HTML</em></i></span>
+						<ul class="sub-menu">
+							<li>
+								<span class="icon-sub-menu"><i class="icon-ok-circled"></i>Ambiente de desenvolvimento</span>
+								<ul class="sub-menu">
+									<li><i class="icon-ok-circled completed"></i>Conhecendo a primeira versão<span class="time-video">11min</span></li>
+									<li><i class="icon-ok-circled"></i>2º versão<span class="time-video">11min</span></li>
+									<li><i class="icon-ok-circled"></i>Por que certos projetos não vão para frente?</li>
+								</ul>
+							</li>
+							<li>
+								<span class="icon-sub-menu"><i class="icon-ok-circled"></i>Git (Controle de versão)</span>
+								<ul class="sub-menu">
+									<li><i class="icon-ok-circled completed"></i>Conhecendo a primeira versão</li>
+									<li><i class="icon-ok-circled"></i>2º versão</li>
+									<li><i class="icon-ok-circled"></i>Por que certos projetos não vão para frente?</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="first"><span class="icon-sub-menu"><i>Ilha 2</i><em class="tag-ilha tag-css">CSS</em></span>
+						<ul class="sub-menu">
+							<li>
+								<span class="icon-sub-menu"><i class="icon-ok-circled"></i>O primeiro protótipo</span>
+								<ul class="sub-menu">
+									<li><i class="icon-ok-circled completed"></i>Conhecendo a primeira versão</li>
+									<li><i class="icon-ok-circled"></i>2º versão</li>
+									<li><i class="icon-ok-circled"></i>Por que certos projetos não vão para frente?</li>
+								</ul>
+							</li>
+							<li>
+								<span class="icon-sub-menu"><i class="icon-ok-circled"></i>Git (Controle de versão)</span>
+								<ul class="sub-menu">
+									<li><i class="icon-ok-circled completed"></i>Conhecendo a primeira versão</li>
+									<li><i class="icon-ok-circled"></i>2º versão</li>
+									<li><i class="icon-ok-circled"></i>Por que certos projetos não vão para frente?</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li class="first"><span class="icon-sub-menu"><i>Ilha 3</i><em class="tag-ilha tag-logica">Lógica</em></span>
+						<ul class="sub-menu">
+							<li>
+								<span class="icon-sub-menu"><i class="icon-ok-circled"></i>O primeiro protótipo</span>
+								<ul class="sub-menu">
+									<li><i class="icon-ok-circled completed"></i>Conhecendo a primeira versão</li>
+									<li><i class="icon-ok-circled"></i>2º versão</li>
+									<li><i class="icon-ok-circled"></i>Por que certos projetos não vão para frente?</li>
+								</ul>
+							</li>
+							<li>
+								<span class="icon-sub-menu"><i class="icon-ok-circled"></i>Git (Controle de versão)</span>
+								<ul class="sub-menu">
+									<li class="open-modal" data-iframe="BFnU2P9SmYI" onclick="getModalVideo(this);"><i class="icon-ok-circled completed"></i>Conhecendo a primeira versão</li>
+									<li><i class="icon-ok-circled"></i>2º versão</li>
+									<li><i class="icon-ok-circled"></i>Por que certos projetos não vão para frente?</li>
+									<li class="article"><span class="icon-sub-menu"><i class="icon-ok-circled"></i><strong>ARTIGOS</strong></span>
+										<ul class="sub-menu">
+											<li class="link-externo"><a href="">Artigo número 1</a></li>
+											<li class="link-externo"><a href="">Artigo número 2</a></li>
+											<li class="link-externo"><a href="">Artigo número 3</a></li>
+											<li class="link-externo"><a href="">Artigo número 4</a></li>
+											<li class="link-externo"><a href="">Artigo número 5</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="sand">
+			<div class="muro1"></div>
+			<div class="pedra"></div>
+			<div class="selva1"></div>
+			<div class="intro">
+				<h1>Mapa da jornada de vídeos</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+				tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+				quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+				consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+				proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			<div class="timeline">
+				<div class="col"><!-- has-articles -->
+					<div class="wrapper-number">
+						<span class="number">1</span>
+					</div>
+					<!-- <ul class="cards">
+						<li><a href="#">Artigo número 1</a></li>
+						<li><a href="#">Artigo número 2</a></li>
+						<li><a href="#">Artigo número 3</a></li>
+						<li><a href="#">Artigo número 4</a></li>
+						<li><a href="#">Artigo número 5</a></li>
+					</ul> -->
+					<div class="wrapper">
+						<h2 class="title">Título do Canal</h2>
+						<p>Empresas e profissionais devem seguir uma dessas 3 opções para escolher o nome do seu canal:</p>
+						<ul class="list-coin">
+							<li class="open-modal" data-iframe="BFnU2P9SmYI" onclick="getModalVideo(this);">
+								<div class="tag tag-video"><span class="title-midia"></span><span class="title-time"></span></div>
+								<div class="coin">
+									<div class="borderext"></div>
+									<div class="borderint"></div>
+									<div class="number-coin">5</div>
+								</div>
+								<i>Utilizar o mesmo nome da sua empresa / produto</i>
+							</li>
+							<li class="open-modal" data-iframe="Da6Oc0vLKyo" onclick="getModalVideo(this);">
+								<div class="tag tag-video"><span class="title-midia"></span><span class="title-time"></span></div>
+								<div class="coin completed">
+									<div class="borderext"></div>
+									<div class="borderint"></div>
+									<div class="number-coin">5</div>
+								</div>
+								<i>Utilizar o nome da pessoa que é a cara do negócio</i>
+							</li>
+							<li>
+								<div class="tag tag-video"><span class="title-midia"></span><span class="title-time"></span></div>
+								<div class="coin">
+									<div class="borderext"></div>
+									<div class="borderint"></div>
+									<div class="number-coin">5</div>
+								</div>
+								<i>Utilizar uma palavra-chave como nome do canal</i>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="wrapper-number">
+						<span class="number">2</span>
+					</div>
+					<div class="wrapper">
+						<h2 class="title">Avatar do Canal (Imagem de Perfil ou Ícone)</h2>
+						<p>O ícone do seu canal pode ser o que você quiser. <br>No caso de empresas, é comum que a logo seja o avatar do canal, logo, se esse for o seu caso, você terá um trabalho de design a menos para fazer.</p>
+						<ul class="list-coin right-coin">
+							<li class="open-modal" data-iframe="BFnU2P9SmYI" onclick="getModalVideo(this);">
+								<div class="tag tag-video"><span class="title-midia"></span><span class="title-time"></span></div>
+								<i>Adicione uma foto ao perfil</i>
+								<div class="coin">
+									<div class="borderext"></div>
+									<div class="borderint"></div>
+									<div class="number-coin">5</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="wrapper-number">
+						<span class="number">3</span>
+					</div>
+					<div class="wrapper">
+						<h2 class="title">Capa do canal (Arte do Canal)</h2>
+						<p>Além de bonita e chamativa, é ideal que a capa de um canal também seja informativa.</p>
+						<ul class="list-coin">
+							<li class="open-modal" data-iframe="BFnU2P9SmYI" onclick="getModalVideo(this);">
+								<div class="tag tag-video"><span class="title-midia"></span><span class="title-time"></span></div>
+								<div class="coin">
+									<div class="borderext"></div>
+									<div class="borderint"></div>
+									<div class="number-coin">5</div>
+								</div>
+								<i>Adicione uma capa</i>
+							</li>
+						</ul>
+						<h2>Instruções:</h2>
+						<ul class="list-style">
+							<li>A imagem não pode ter dimensões menores que 2.048 x 1.152 pixels;</li>
+							<li>O tamanho da imagem não pode passar de 6 MB, do contrário, não será aceita.</li>
+							<li>Os formatos suportados são JPG, GIF, BMP ou PNG (não é possível usar GIFs animados)</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="wrapper-number">
+						<span class="number">4</span>
+					</div>
+					<div class="wrapper">
+						<h2 class="title">Descrição do canal</h2>
+						<p>Este item é autoexplicativo. No seu canal também há uma seção “sobre”, na qual você pode escrever os objetivos do canal, dar informações sobre quem o produz, entre várias outras coisas. Para otimizar os resultados do seu canal nas buscas, sugiro que descreva um pouco do trabalho que será feito e utilize palavras-chave para fazer isso. </p>
+						<ul class="list-coin right-coin">
+							<li class="open-modal" data-iframe="BFnU2P9SmYI" onclick="getModalVideo(this);">
+								<div class="tag tag-video"><span class="title-midia"></span><span class="title-time"></span></div>
+								<i>Não deixar descrição do canal em branco</i>
+								<div class="coin">
+									<div class="borderext"></div>
+									<div class="borderint"></div>
+									<div class="number-coin">5</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="wrapper-number">
+						<span class="number">5</span>
+					</div>
+					<div class="wrapper">
+						<h2 class="title">Configurações Avançadas Do Canal</h2>
+						<p>No estúdio de criação, selecione a opção “canal” e clique em “avançadas”. As duas primeiras opções que você verá são “país” e “palavras-chave do canal”.</p>
+						<p>Marcar um país específico não é algo ruim. Se você selecionar o Brasil, por exemplo, pessoas de outros países ainda poderão ver o seu conteúdo. A única diferença é que usuários brasileiros encontrarão o seu canal com mais facilidade.</p>
+						<p>Depois disso, adicione uma lista de palavras-chave para que o Youtube saiba quais temas o seu canal aborda. É muito importante que você faça isso logo durante a criação do canal.</p>
+						<p>Ainda nas configurações avançadas, aconselho que preencha dois itens:</p>
+						<h2>1. Website associado</h2>
+						<p>Para confirmar que o seu canal faz parte de um projeto maior, com site ou blog, ajudando até nos resultados de pesquisas</p>
+						<h2>2. Recomendações do canal</h2>
+						<p>Há dois tipos de recomendação de canal:</p>
+						<ul class="list-style">
+							<li>Recomendação feita por você (Canais em Destaque)</li>
+							<li>Recomendação feita pelo próprio Youtube, conhecida como Canais Relacionados ou Canais Famosos</li>
+						</ul>
+						<ul class="list-coin">
+							<li class="open-modal" data-iframe="BFnU2P9SmYI" onclick="getModalVideo(this);">
+								<div class="tag tag-video"><span class="title-midia"></span><span class="title-time"></span></div>
+								<div class="coin">
+									<div class="borderext"></div>
+									<div class="borderint"></div>
+									<div class="number-coin">5</div>
+								</div>
+								<i>Marcar um país específico</i>
+							</li>
+							<li class="descr"><strong>Obs:</strong> Marcar um país específico não é algo ruim. Se você selecionar o Brasil, por exemplo, pessoas de outros países ainda poderão ver o seu conteúdo. A única diferença é que usuários brasileiros encontrarão o seu canal com mais facilidade.</li>
+							<li class="open-modal" data-iframe="BFnU2P9SmYI" onclick="getModalVideo(this);">
+								<div class="tag tag-video"><span class="title-midia"></span><span class="title-time"></span></div>
+								<div class="coin">
+									<div class="borderext"></div>
+									<div class="borderint"></div>
+									<div class="number-coin">5</div>
+								</div>
+								<i>Adicione uma lista de palavras-chave</i>
+							</li>
+							<li class="descr"><strong>Obs:</strong> O Youtube precisa saber quais temas o seu canal aborda. É muito importante que você faça isso logo durante a criação do canal.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="wrapper-number">
+						<span class="number">6</span>
+					</div>
+					<div class="wrapper">
+						<h2 class="title">Mudar o Nome do Arquivo do Vídeo</h2>
+						<p>Você não sabe, mas o nome do arquivo, mesmo não aparecendo para o público, tem o potencial de aumentar as chances do seu vídeo ser encontrado nas buscas.</p>
+						<p>Para isso, basta usar palavras-chave como nome do vídeo. Se o seu vídeo fala sobre os melhores filmes de 2023, um bom nome para o arquivo seria: melhores filmes cinema 2023</p>
+						<ul class="list-coin right-coin">
+							<li class="open-modal" data-iframe="BFnU2P9SmYI" onclick="getModalVideo(this);">
+								<div class="tag tag-video"><span class="title-midia"></span><span class="title-time"></span></div>
+								<i>Jamais deixar o arquivo com um nome aleatório</i>
+								<div class="coin">
+									<div class="borderext"></div>
+									<div class="borderint"></div>
+									<div class="number-coin">5</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="wrapper-number">
+						<span class="number">7</span>
+					</div>
+					<div class="wrapper">
+						<h2 class="title">Enviar o Vídeo Com Uma Thumbnail</h2>
+						<p>Já possui a opção de enviar miniaturas personalizadas? Caso sim, lembre-se de usá-las em todos os vídeos. Elas são uma peça fundamental para que o seu vídeo receba cliques e seja visto por mais pessoas.</p>
+						<p>Caso não, vá até o estúdio de criação, clique em canal e, em seguida, em status e recursos. Depois disso, procure pela opção Enviar Miniaturas Personalizadas e veja quais critérios devem ser cumpridos para que a ativação seja realizada.</p>
+						<p>Em alguns casos a thumbnail pode demorar um pouco para carregar se for aplicada depois do upload. Para evitar este problema, aconselho que o faça durante o processo de upload.</p>
+						<ul class="list-coin">
+							<li class="open-modal" data-iframe="BFnU2P9SmYI" onclick="getModalVideo(this);">
+								<div class="tag tag-video"><span class="title-midia"></span><span class="title-time"></span></div>
+								<div class="coin">
+									<div class="borderext"></div>
+									<div class="borderint"></div>
+									<div class="number-coin">5</div>
+								</div>
+								<i>Todos os vídeos tem uma thumbnail</i>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col">
+					<div class="wrapper-number">
+						<span class="number">8</span>
+					</div>
+					<div class="wrapper">
+						<h2 class="title">Definir Uma Descrição Padrão</h2>
+						<p>Para poupar tempo, é possível definir uma descrição padrão para todos os seus vídeos.</p>
+						<p>Normalmente isso é utilizado para que você deixe todos os dados de redes sociais pré-definidos, precisando apenas preencher informações específicas do vídeo que acabou de ser enviado.</p>
+						<p>Como as redes sociais costumam ser divulgadas na descrição de todos os vídeos, já dá para ter uma ideia de quanto tempo isso pode lhe poupar, não é?</p>
+						<p>Para fazer isso, vá até o estúdio de criação, clique em Canal e, em seguida, padrões de envio.</p>
+						<ul class="list-coin right-coin">
+							<li class="open-modal" data-iframe="BFnU2P9SmYI" onclick="getModalVideo(this);">
+								<div class="tag tag-video"><span class="title-midia"></span><span class="title-time"></span></div>
+								<i>Definir uma descrição padrão ao canal</i>
+								<div class="coin">
+									<div class="borderext"></div>
+									<div class="borderint"></div>
+									<div class="number-coin">5</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<!-- <div class="bau">
+					<input type="checkbox" id="top-checkbox"/><label for="top-checkbox" id="treasurechest">
+					<div id="treasurechest-top">
+					</div>
+					</label>
+					<div id="treasurechest-bottom"></div>
+					<div id="treasurechest-bg"></div>
+					  <div id="rupee"></div>
+					<audio id="treasure-sound">
+						<source src="src/music/zelda_chest.mp3"></source>
+					</audio>
+				</div> -->
+			</div>
+			<div class="rodape"></div>
+		</div>
+		<div class="footer">
+			<div class="center">
+				<div class="box white-box">
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et quam eligendi dicta fuga obcaecati aut in odio possimus ut, cumque eum ipsa voluptatibus quos architecto adipisci animi necessitatibus veniam fugit.</p>
+				</div>
+				<div class="box">
+					<h6>Título</h6>
+					<ul>
+						<li><a href="">Item 1</a></li>
+						<li><a href="">Item 2</a></li>
+						<li><a href="">Item 3</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="myModal" class="modal">
+		  <div class="modal-content">
+		    <span class="close"></span>
+		  </div>
+		</div>
+	</div>
+	<script src="build/js/components/align-itens.js"></script>
+	<script src="build/js/components/modal-video.js"></script>
+	<script src="build/js/components/menu.js"></script>
+	<script>
+		var treasure = "You Found a Rupee";
+tresString = treasure.split("");
+document.getElementById('top-checkbox').addEventListener('change', function(e){
+  if(e.currentTarget.checked === true){
+    var audio = document.getElementById("treasure-sound");
+audio.play();
+  } else {
+    curLet = 0;
+    var audio = document.getElementById("treasure-sound");
+audio.pause();
+    audio.currentTime = 0;
+  }
+});
+	</script>
+</body>
+</html>

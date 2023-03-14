@@ -1,0 +1,14 @@
+@import "./components/default";
+@import "./components/modal";
+@import "./components/footer";
+@import "./components/menu";
+@import "./components/fonts";
+@import "./components/bau";
+
+.list-style {
+
+	li {
+
+		list-style: disc inside;
+	}
+}

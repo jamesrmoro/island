@@ -1,0 +1,1 @@
+npx sass --watch src/sass/global.scss:build/css/global.css

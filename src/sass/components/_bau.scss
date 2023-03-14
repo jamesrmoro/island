@@ -1,0 +1,169 @@
+$black: #000;
+$brown: #b52121;
+$white: #FFF;
+$gold: #ffbb00;
+$green: #52962d;
+
+@mixin pixelsize {
+
+    width: 10px;
+    height: 10px;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@keyframes rupeeRise{
+
+    0%{
+        bottom: 130px;
+        z-index: 4;
+    }
+    100%{
+        bottom: 300px;
+        z-index: 4;
+    }
+}
+
+@keyframes topChest{
+
+    0%{
+        margin-top: 0;
+    }
+    100%{
+        margin-top: -100px;
+    }
+}
+
+@keyframes zChange{
+
+    0%{
+        z-index: 5;
+    }
+    100%{
+        z-index: 5;
+    }
+}
+
+.bau {
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 182px;
+
+  .coin {
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    top: 85px;
+
+    .borderint {
+
+      width: 85px;
+      height: 85px;
+      top: 7px;
+    }
+
+    .borderext {
+
+      width: 70px;
+      height: 70px;
+      top: 14px;
+    }
+
+    .number-coin {
+
+      top: 34px;
+      width: 83px;
+      font-size: 37px;
+    }
+  }
+}
+
+#top-checkbox {
+
+    display: none;
+
+    &:checked + label {
+
+        #treasurechest-top {
+
+            animation: topChest 2s linear 0s 1 forwards;
+        }
+
+        & + #treasurechest-bottom {
+
+            animation: zChange 2s linear 2s 1 forwards;
+        }
+
+        & ~ .coin {
+
+            animation: rupeeRise 4s linear 3s 1 forwards;
+        }
+    }
+
+    &:checked ~ #instructions {
+
+        display: none;
+    }
+}
+
+#treasurechest {
+
+    border-top: 10px solid #000;
+    position: absolute;
+    display: block;
+    left: 50%;
+    width: 200px;
+    height: 160px;
+    z-index: 3;
+    transform: translateX(-50%);
+    overflow: hidden;
+    bottom: 20px;
+}
+#treasurechest-top{
+  @include pixelsize;
+  z-index: 3;
+  background: $gold;
+  box-shadow: -95px 0px $gold, -85px 0px $gold, -75px 0px $black, -65px 0px $brown, -55px 0px $brown, -45px 0px $white, -35px 0px $brown, -25px 0px $brown, -15px 0px $black, -5px 0px $gold, 5px 0px $gold, 15px 0px $black, 25px 0px $brown, 35px 0px $brown, 45px 0px $white, 55px 0px $brown, 65px 0px $brown, 75px 0px $black, 85px 0px $gold, 95px 0px $gold, -95px 10px $gold, -85px 10px $gold, -75px 10px $black, -65px 10px $brown, -55px 10px $brown, -45px 10px $black, -35px 10px $brown, -25px 10px $brown, -15px 10px $black, -5px 10px $gold, 5px 10px $gold, 15px 10px $black, 25px 10px $brown, 35px 10px $brown, 45px 10px $black, 55px 10px $brown, 65px 10px $brown, 75px 10px $black, 85px 10px $gold, 95px 10px $gold, -95px 20px $white, -85px 20px $white, -75px 20px $black, -65px 20px lighten($brown,20%), -55px 20px lighten($brown,20%), -45px 20px lighten($brown,20%), -35px 20px lighten($brown,20%), -25px 20px lighten($brown,20%), -15px 20px $black, -5px 20px $white, 5px 20px $white, 15px 20px $black, 25px 20px lighten($brown,20%), 35px 20px lighten($brown,20%), 45px 20px lighten($brown,20%), 55px 20px lighten($brown,20%), 65px 20px lighten($brown,20%), 75px 20px $black, 85px 20px $white, 95px 20px $white, 105px 20px $black, -105px 30px $black, -95px 30px $white, -85px 30px $white, -75px 30px $black, -65px 30px lighten($brown,20%), -55px 30px lighten($brown,20%), -45px 30px lighten($brown,20%), -35px 30px lighten($brown,20%), -25px 30px lighten($brown,20%), -15px 30px $black, -5px 30px $white, 5px 30px $white, 15px 30px $black, 25px 30px lighten($brown,20%), 35px 30px lighten($brown,20%), 45px 30px lighten($brown,20%), 55px 30px lighten($brown,20%), 65px 30px lighten($brown,20%), 75px 30px $black, 85px 30px $white, 95px 30px $white, -95px 40px $gold, -85px 40px $gold, -75px 40px $black, -65px 40px $brown, -55px 40px $brown, -45px 40px $brown, -35px 40px $brown, -25px 40px $brown, -15px 40px $black, -5px 40px $gold, 5px 40px $gold, 15px 40px $black, 25px 40px $brown, 35px 40px $brown, 45px 40px $brown, 55px 40px $brown, 65px 40px $brown, 75px 40px $black, 85px 40px $gold, 95px 40px $gold, -95px 50px $gold, -85px 50px $gold, -75px 50px $black, -65px 50px $brown, -55px 50px $brown, -45px 50px $white, -35px 50px $brown, -25px 50px $brown, -15px 50px $black, -5px 50px $gold, 5px 50px $gold, 15px 50px $black, 25px 50px $brown, 35px 50px $brown, 45px 50px $white, 55px 50px $brown, 65px 50px $brown, 75px 50px $black, 85px 50px $gold, 95px 50px $gold, -95px 60px $gold, -85px 60px $gold, -75px 60px $black, -65px 60px $brown, -55px 60px $brown, -45px 60px $black, -35px 60px $brown, -25px 60px $brown, -15px 60px $black, -5px 60px $gold, 5px 60px $gold, 15px 60px $black, 25px 60px $brown, 35px 60px $brown, 45px 60px $black, 55px 60px $brown, 65px 60px $brown, 75px 60px $black, 85px 60px $gold, 95px 60px $gold, -95px 70px $gold, -85px 70px $gold, -75px 70px $black, -65px 70px $brown, -55px 70px $brown, -45px 70px $brown, -35px 70px $brown, -25px 70px $brown, -15px 70px $black, -5px 70px $gold, 5px 70px $gold, 15px 70px $black, 25px 70px $brown, 35px 70px $brown, 45px 70px $brown, 55px 70px $brown, 65px 70px $brown, 75px 70px $black, 85px 70px $gold, 95px 70px $gold, -95px 80px $gold, -85px 80px $gold, -75px 80px $black, -65px 80px $brown, -55px 80px $brown, -45px 80px $brown, -35px 80px $brown, -25px 80px $brown, -15px 80px $black, -5px 80px $gold, 5px 80px $gold, 15px 80px $black, 25px 80px $brown, 35px 80px $brown, 45px 80px $brown, 55px 80px $brown, 65px 80px $brown, 75px 80px $black, 85px 80px $gold, 95px 80px $gold, -95px 90px $gold, -85px 90px $gold, -75px 90px $black, -65px 90px $black, -55px 90px $black, -45px 90px $black, -35px 90px $black, -25px 90px $black, -15px 90px $black, -5px 90px $gold, 5px 90px $gold, 15px 90px $black, 25px 90px $black, 35px 90px $black, 45px 90px $black, 55px 90px $black, 65px 90px $black, 75px 90px $black, 85px 90px $gold, 95px 90px $gold, -95px 100px $gold, -85px 100px $gold, -75px 100px $gold, -65px 100px $gold, -55px 100px $gold, -45px 100px $gold, -35px 100px $gold, -25px 100px $gold, -15px 100px $white, -5px 100px $white, 5px 100px $white, 15px 100px $white, 25px 100px $gold, 35px 100px $gold, 45px 100px $gold, 55px 100px $gold, 65px 100px $gold, 75px 100px $gold, 75px 100px $gold, 85px 100px $gold, 95px 100px $gold, -95px 110px $black, -85px 110px $black, -75px 110px $black, -65px 110px $black, -55px 110px $black, -45px 110px $black, -35px 110px $black, -25px 110px $black, -15px 110px $gold, -5px 110px $black, 5px 110px $black, 15px 110px $gold, 25px 110px $black, 35px 110px $black, 45px 110px $black, 55px 110px $black, 65px 110px $black, 75px 110px $black, 85px 110px $black, 95px 110px $black, -15px 120px $gold, 15px 120px $gold, -15px 130px $gold, -5px 130px $gold, 5px 130px $gold, 15px 130px $gold, -15px 140px $black, -5px 140px $black, 5px 140px $black, 15px 140px $black;
+  &:before{
+    content: ' ';
+    width: 220px;
+    height: 190px;
+    display: block;
+    margin-left: -110px;
+  }
+}
+#treasurechest-bottom{
+  @include pixelsize;
+  z-index: 2;
+  position: absolute;
+  bottom: 180px;
+  box-shadow: -105px 90px $black, -95px 90px $black, -85px 90px $black, -75px 90px $black, -65px 90px $black, -55px 90px $black, -45px 90px $black, -35px 90px $black, -25px 90px $black, -15px 90px $black, -5px 90px $black, 5px 90px $black, 15px 90px $black, 25px 90px $black, 35px 90px $black, 45px 90px $black, 55px 90px $black, 65px 90px $black, 75px 90px $black, 85px 90px $black, 95px 90px $black, 105px 90px $black, -105px 100px $black, -95px 100px $gold, -85px 100px $gold, -75px 100px $black, -65px 100px $brown, -55px 100px $brown, -45px 100px $brown, -35px 100px $brown, -25px 100px $brown, -15px 100px $brown, -5px 100px $brown, 5px 100px $brown, 15px 100px $brown, 25px 100px $brown, 35px 100px $brown, 45px 100px $brown, 55px 100px $brown, 65px 100px $brown, 75px 100px $black, 85px 100px $gold, 95px 100px $gold, 105px 100px $black, -105px 110px $black, -95px 110px $gold, -85px 110px $gold, -75px 110px $black, -65px 110px $brown, -55px 110px $brown, -45px 110px $brown, -35px 110px $brown, -25px 110px $brown, -15px 110px $brown, -5px 110px $brown, 5px 110px $brown, 15px 110px $brown, 25px 110px $brown, 35px 110px $brown, 45px 110px $brown, 55px 110px $brown, 65px 110px $brown, 75px 110px $black, 85px 110px $gold, 95px 110px $gold, 105px 110px $black, -105px 120px $black, -95px 120px $gold, -85px 120px $gold, -75px 120px $black, -65px 120px $brown, -55px 120px $brown, -45px 120px $brown, -35px 120px $brown, -25px 120px $brown, -15px 120px $brown, -5px 120px $brown, 5px 120px $brown, 15px 120px $brown, 25px 120px $brown, 35px 120px $brown, 45px 120px $brown, 55px 120px $brown, 65px 120px $brown, 75px 120px $black, 85px 120px $gold, 95px 120px $gold, 105px 120px $black, -105px 130px $black, -95px 130px $gold, -85px 130px $gold, -75px 130px $black, -65px 130px $brown, -55px 130px $brown, -45px 130px $brown, -35px 130px $brown, -25px 130px $brown, -15px 130px $brown, -5px 130px $brown, 5px 130px $brown, 15px 130px $brown, 25px 130px $brown, 35px 130px $brown, 45px 130px $brown, 55px 130px $brown, 65px 130px $brown, 75px 130px $black, 85px 130px $gold, 95px 130px $gold, 105px 130px $black, -105px 140px $black, -95px 140px $gold, -85px 140px $gold, -75px 140px $black, -65px 140px $black, -55px 140px $black, -45px 140px $black, -35px 140px $black, -25px 140px $black, -15px 140px $black, -5px 140px $black, 5px 140px $black, 15px 140px $black, 25px 140px $black, 35px 140px $black, 45px 140px $black, 55px 140px $black, 65px 140px $black, 75px 140px $black, 85px 140px $gold, 95px 140px $gold, 105px 140px $black,-105px 150px $black, -95px 150px $gold, -85px 150px $gold, -75px 150px $gold, -65px 150px $gold, -55px 150px $gold, -45px 150px $gold, -35px 150px $gold, -25px 150px $gold, -15px 150px $gold, -5px 150px $gold, 5px 150px $gold, 15px 150px $gold, 25px 150px $gold, 35px 150px $gold, 45px 150px $gold, 55px 150px $gold, 65px 150px $gold, 75px 150px $gold, 85px 150px $gold, 95px 150px $gold, 105px 150px $black, -105px 160px $black, -95px 160px $gold, -85px 160px $gold, -75px 160px $gold, -65px 160px $gold, -55px 160px $gold, -45px 160px $gold, -35px 160px $gold, -25px 160px $gold, -15px 160px $gold, -5px 160px $gold, 5px 160px $gold, 15px 160px $gold, 25px 160px $gold, 35px 160px $gold, 45px 160px $gold, 55px 160px $gold, 65px 160px $gold, 75px 160px $gold, 85px 160px $gold, 95px 160px $gold, 105px 160px $black, -105px 170px $black, -95px 170px $black, -85px 170px $black, -75px 170px $black, -65px 170px $black, -55px 170px $black, -45px 170px $black, -35px 170px $black, -25px 170px $black, -15px 170px $black, -5px 170px $black, 5px 170px $black, 15px 170px $black, 25px 170px $black, 35px 170px $black, 45px 170px $black, 55px 170px $black, 65px 170px $black, 75px 170px $black, 85px 170px $black, 95px 170px $black, 105px 170px $black;
+}
+#treasurechest-bg{
+  @include pixelsize;
+  z-index: 0;
+  position: absolute;
+  z-index: 2;
+  bottom: 160px;
+  background: $brown;
+  box-shadow: -105px 0px $black, -95px 0px darken($brown, 20%), -85px 0px darken($brown, 20%), -75px 0px darken($brown, 20%), -65px 0px darken($brown, 20%), -55px 0px darken($brown, 20%), -45px 0px darken($brown, 20%), -35px 0px darken($brown, 20%), -25px 0px darken($brown, 20%), -15px 0px darken($brown, 20%), -5px 0px darken($brown, 20%), 5px 0px darken($brown, 20%), 15px 0px darken($brown, 20%), 25px 0px darken($brown, 20%), 35px 0px darken($brown, 20%), 45px 0px darken($brown, 20%), 55px 0px darken($brown, 20%), 65px 0px darken($brown, 20%), 75px 0px darken($brown, 20%), 85px 0px darken($brown, 20%), 95px 0px darken($brown, 20%), 105px 0px $black, -105px 10px $black, -95px 10px darken($brown, 20%), -85px 10px darken($brown, 20%), -75px 10px darken($brown, 20%), -65px 10px darken($brown, 20%), -55px 10px darken($brown, 20%), -45px 10px darken($brown, 20%), -35px 10px darken($brown, 20%), -25px 10px darken($brown, 20%), -15px 10px darken($brown, 20%), -5px 10px darken($brown, 20%), 5px 10px darken($brown, 20%), 15px 10px darken($brown, 20%), 25px 10px darken($brown, 20%), 35px 10px darken($brown, 20%), 45px 10px darken($brown, 20%), 55px 10px darken($brown, 20%), 65px 10px darken($brown, 20%), 75px 10px darken($brown, 20%), 85px 10px darken($brown, 20%), 95px 10px darken($brown, 20%), 105px 10px $black, -105px 20px $black, -95px 20px darken($brown, 20%), -85px 20px darken($brown, 20%), -75px 20px darken($brown, 20%), -65px 20px darken($brown, 20%), -55px 20px darken($brown, 20%), -45px 20px darken($brown, 20%), -35px 20px darken($brown, 20%), -25px 20px darken($brown, 20%), -15px 20px darken($brown, 20%), -5px 20px darken($brown, 20%), 5px 20px darken($brown, 20%), 15px 20px darken($brown, 20%), 25px 20px darken($brown, 20%), 35px 20px darken($brown, 20%), 45px 20px darken($brown, 20%), 55px 20px darken($brown, 20%), 65px 20px darken($brown, 20%), 75px 20px darken($brown, 20%), 85px 20px darken($brown, 20%), 95px 20px darken($brown, 20%), 105px 20px $black, -105px 30px $black, -95px 30px darken($brown, 20%), -85px 30px darken($brown, 20%), -75px 30px darken($brown, 20%), -65px 30px darken($brown, 20%), -55px 30px darken($brown, 20%), -45px 30px darken($brown, 20%), -35px 30px darken($brown, 20%), -25px 30px darken($brown, 20%), -15px 30px darken($brown, 20%), -5px 30px darken($brown, 20%), 5px 30px darken($brown, 20%), 15px 30px darken($brown, 20%), 25px 30px darken($brown, 20%), 35px 30px darken($brown, 20%), 45px 30px darken($brown, 20%), 55px 30px darken($brown, 20%), 65px 30px darken($brown, 20%), 75px 30px darken($brown, 20%), 85px 30px darken($brown, 20%), 95px 30px darken($brown, 20%), 105px 30px $black, -105px 40px $black, -95px 40px darken($brown, 20%), -85px 40px darken($brown, 20%), -75px 40px darken($brown, 20%), -65px 40px darken($brown, 20%), -55px 40px darken($brown, 20%), -45px 40px darken($brown, 20%), -35px 40px darken($brown, 20%), -25px 40px darken($brown, 20%), -15px 40px darken($brown, 20%), -5px 40px darken($brown, 20%), 5px 40px darken($brown, 20%), 15px 40px darken($brown, 20%), 25px 40px darken($brown, 20%), 35px 40px darken($brown, 20%), 45px 40px darken($brown, 20%), 55px 40px darken($brown, 20%), 65px 40px darken($brown, 20%), 75px 40px darken($brown, 20%), 85px 40px darken($brown, 20%), 95px 40px darken($brown, 20%), 105px 40px $black, -105px 50px $black, -95px 50px darken($brown, 20%), -85px 50px darken($brown, 20%), -75px 50px darken($brown, 20%), -65px 50px darken($brown, 20%), -55px 50px darken($brown, 20%), -45px 50px darken($brown, 20%), -35px 50px darken($brown, 20%), -25px 50px darken($brown, 20%), -15px 50px darken($brown, 20%), -5px 50px darken($brown, 20%), 5px 50px darken($brown, 20%), 15px 50px darken($brown, 20%), 25px 50px darken($brown, 20%), 35px 50px darken($brown, 20%), 45px 50px darken($brown, 20%), 55px 50px darken($brown, 20%), 65px 50px darken($brown, 20%), 75px 50px darken($brown, 20%), 85px 50px darken($brown, 20%), 95px 50px darken($brown, 20%), 105px 50px $black, -105px 60px $black, -95px 60px darken($brown, 20%), -85px 60px darken($brown, 20%), -75px 60px darken($brown, 20%), -65px 60px darken($brown, 20%), -55px 60px darken($brown, 20%), -45px 60px darken($brown, 20%), -35px 60px darken($brown, 20%), -25px 60px darken($brown, 20%), -15px 60px darken($brown, 20%), -5px 60px darken($brown, 20%), 5px 60px darken($brown, 20%), 15px 60px darken($brown, 20%), 25px 60px darken($brown, 20%), 35px 60px darken($brown, 20%), 45px 60px darken($brown, 20%), 55px 60px darken($brown, 20%), 65px 60px darken($brown, 20%), 75px 60px darken($brown, 20%), 85px 60px darken($brown, 20%), 95px 60px darken($brown, 20%), 105px 60px $black, -105px 70px $black, -95px 70px darken($brown, 20%), -85px 70px darken($brown, 20%), -75px 70px darken($brown, 20%), -65px 70px darken($brown, 20%), -55px 70px darken($brown, 20%), -45px 70px darken($brown, 20%), -35px 70px darken($brown, 20%), -25px 70px darken($brown, 20%), -15px 70px darken($brown, 20%), -5px 70px darken($brown, 20%), 5px 70px darken($brown, 20%), 15px 70px darken($brown, 20%), 25px 70px darken($brown, 20%), 35px 70px darken($brown, 20%), 45px 70px darken($brown, 20%), 55px 70px darken($brown, 20%), 65px 70px darken($brown, 20%), 75px 70px darken($brown, 20%), 85px 70px darken($brown, 20%), 95px 70px darken($brown, 20%), 105px 70px $black;
+}
+#rupee{
+  @include pixelsize;
+  position: absolute;
+  bottom: 130px;
+  z-index: 0;
+  background: $black;
+  margin-left: -5px;
+  box-shadow: 10px 0px $black, -10px 10px $black, 0px 10px lighten($green, 10%), 10px 10px $green, 20px 10px $black, -20px 20px $black, -10px 20px lighten($green, 10%), 0px 20px lighten($green, 10%), 10px 20px $green, 20px 20px $green, 30px 20px $black, -30px 30px $black, -20px 30px lighten($green, 10%), -10px 30px lighten($green, 10%), 0px 30px darken($green, 15%), 10px 30px darken($green, 15%), 20px 30px $green, 30px 30px $green, 40px 30px $black, -30px 40px $black, -20px 40px lighten($green, 10%), -10px 40px darken($green, 15%), 0px 40px lighten($green, 20%), 10px 40px lighten($green, 20%), 20px 40px darken($green, 15%), 30px 40px $green, 40px 40px $black, -30px 50px $black,-20px 50px lighten($green, 10%), -10px 50px darken($green, 15%), 0px 50px lighten($green, 20%), 10px 50px lighten($green, 20%), 20px 50px darken($green, 15%), 30px 50px $green, 40px 50px $black, -30px 60px $black, -20px 60px lighten($green, 10%), -10px 60px darken($green, 15%), 0px 60px lighten($green, 20%), 10px 60px lighten($green, 20%), 20px 60px darken($green, 15%), 30px 60px $green, 40px 60px $black, -30px 70px $black, -20px 70px lighten($green, 10%), -10px 70px darken($green, 15%), 0px 70px lighten($green, 20%), 10px 70px lighten($green, 20%), 20px 70px darken($green, 15%), 30px 70px $green, 40px 70px $black, -30px 80px $black, -20px 80px lighten($green, 10%), -10px 80px lighten($green, 10%), 0px 80px darken($green, 15%), 10px 80px darken($green, 15%), 20px 80px $green, 30px 80px $green, 40px 80px $black, -20px 90px $black, -10px 90px lighten($green, 10%), 0px 90px lighten($green, 10%), 10px 90px $green, 20px 90px $green, 30px 90px $black, -10px 100px $black, 0px 100px lighten($green, 10%), 10px 100px $green, 20px 100px $black, 0px 110px $black, 10px 110px $black;
+}
